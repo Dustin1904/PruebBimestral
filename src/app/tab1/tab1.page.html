@@ -1,17 +1,38 @@
-<ion-header [translucent]="true">
+<ion-header class="bg-white bg-opacity-80 backdrop-blur-sm" [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 1
+    <ion-title class="text-xl font-bold text-center text-gray-800">
+      Bibliografía
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="bg-gray-100 p-5">
+  <ion-toolbar class="p-5 bg-white shadow-md rounded-lg">
+    <ion-title class="text-lg font-semibold text-center">Sobre mí</ion-title>
+    
+    <p class="text-justify mt-4 text-gray-700">
+      Hola, mi nombre es Dustin Marcatoma, actualmente tengo 20 años y sigo la carrera de desarrollo de software, me considero un chico tranquilo, amante de la tecnología y la música.
+    </p>
+    
+    <br>
+    
+    <p class="text-justify text-gray-700">
+      Me gusta mucho jugar videojuegos y ver series de anime, series normales o películas de todo tipo de género, también me gusta aprender nuevas cosas y mejorar mis habilidades.
+    </p>
+    
+    <br>
+    
+    <p class="text-justify text-gray-700">
+      Nací el 19 de marzo del 2004 en la ciudad de Quito - Ecuador, he vivido en Quito aproximadamente 15 años. Desde pequeño siempre fui alguien tranquilo que no le gusta mucho estar rodeado de personas, sin embargo, aprecio mucho las amistades que he logrado conseguir a lo largo de mi vida.
+    </p>
+    <ion-title> Si quieres saber mas de mi puedes contactárte con migo en mis redes sociales: </ion-title>
+    <div class="flex justify-center">
+      <a href="https://www.facebook.com/DustinJMS?locale=es_LA"> <img src="../../assets/images/Facebook-1.webp" class="w-40 h-40"> </a>
+      <a href="https://www.tiktok.com/@dustinmsj?_t=8qqVcCuCdiX&_r=1"> <img src="../../assets/images/tiktok.avif" class="w-40 h-40"> </a>
+      <a href=""> <img src="../../assets/images/whats.avif" class="w-40 h-40"> </a>
+      <a href=""> <img src="../../assets/images/youtube.webp" class="w-40 h-40"> </a>
+    </div>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+    
+  </ion-toolbar>
 </ion-content>
