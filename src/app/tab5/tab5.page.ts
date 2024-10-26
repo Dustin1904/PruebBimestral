@@ -3,7 +3,8 @@ import { IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/angular/stan
 import { ExploreContainerComponent } from '../explore-container/explore-container.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { IonicModule } from '@ionic/angular';
+import { Filesystem , Directory , Encoding } from '@capacitor/filesystem';
+import { Capacitor } from '@capacitor/core';
 
 @Component({
   selector: 'app-tab4',
@@ -13,5 +14,18 @@ import { IonicModule } from '@ionic/angular';
 })
 export class Tab5Page {
   constructor() {}
-
+  comentario: string = '';
+  async  guardarComentario() {
+    if ( Capacitor.isNativePlatform() ){
+      const directorio = await Filesystem.writeFile({
+        path:  'comentarios.txt',
+        data: this.comentario,
+        encoding: Encoding.UTF8,
+        directory:  Directory.Documents
+      })
+    }  else {
+      localStorage.setItem("Comentario: " ,  this.comentario);
+    }
+    this.comentario = '';
+  }
 }

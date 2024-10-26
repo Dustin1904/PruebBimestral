@@ -34,5 +34,9 @@ export class Tab4Page {
       this.x1 = "No hay solucion con numeros reales";
       this.x2 = "No hay solucion con numeros reales";
     }
+    // Limpiar los campos luego de calcular
+    this.a = null;
+    this.b = null;
+    this.c = null;
   }
 }
