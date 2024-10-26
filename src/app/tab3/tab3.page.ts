@@ -15,12 +15,12 @@ export class Tab3Page {
   diferenciaFechas: number;
   
   primeraFecha(event: any){
-    this.primeraFecha = event.detail.value;
+    this.fecha1 = event.detail.value;
     this.calcularDiferencia();
   }
   
   segundaFecha(event: any){
-    this.segundaFecha = event.detail.value;
+    this.fecha2 = event.detail.value;
     this.calcularDiferencia();
   }
   
@@ -36,8 +36,10 @@ export class Tab3Page {
       const fechaEntrada = new Date(this.fecha1);
       const fechaSalida = new Date(this.fecha2);
       const diferencia = fechaSalida.getTime() - fechaEntrada.getTime();
-      const dias = Math.floor(diferencia / (1000 * 60 * 60 ))
-      this.diferenciaFechas = dias;
+      const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+      // sacar el valor absoluto de los dias para evitar que se muestre  un valor negativo
+      this.diferenciaFechas = Math.abs(dias);
+      //this.diferenciaFechas = dias;
     }
   }
 }

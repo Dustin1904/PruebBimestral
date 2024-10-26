@@ -1,18 +1,31 @@
 <ion-header [translucent]="true">
     <ion-toolbar>
       <ion-title>
-        Tab 4
+        Fórmula General
       </ion-title>
     </ion-toolbar>
   </ion-header>
   
-  <ion-content [fullscreen]="true">
-    <ion-header collapse="condense">
-      <ion-toolbar>
-        <ion-title size="large">Tab 4</ion-title>
-      </ion-toolbar>
-    </ion-header>
-  
-    <app-explore-container name="Tab 4 page"></app-explore-container>
+  <ion-content [fullscreen]="true" class="">
+    <div class="h-full w-full flex justify-center">
+      <div class="grid place-content-center">
+        <h1> Calculadora de funcionaes cuadráticas </h1>
+        <img src="../../assets/images/Formula-general-1-320.webp" class="w-72 h-52" alt="">
+        <label class="text-center" > a: </label>
+        <input class="bg-black rounded-lg text-white pl-5" type="number" placeholder="Valor de a" [(ngModel)]="a">
+
+        <label class="text-center"> b: </label>
+        <input class="bg-black rounded-lg text-white pl-5" type="number" placeholder="Valor de b" [(ngModel)]="b">
+
+        <label class="text-center"> c: </label>
+        <input class="bg-black rounded-lg text-white pl-5" type="number" placeholder="Valor de c" [(ngModel)]="c"> <br>
+        <button class="bg-green-600 rounded-lg" (click)="calcular()" > Calcular </button>
+        <h2 class="text-center" > Resultado de x1: </h2>
+        <input class="text-center rounded border-solid border-2 border-black" type="text" placeholder="Resultado" [(ngModel)]="x1" readonly>
+        <h2 class="text-center"> Resultado de x2 </h2>
+        <input class="text-center rounder border-solid border-2 border-black" type="text" placeholder="Resultado" [(ngModel)]="x2" readonly>
+
+      </div>
+    </div>
   </ion-content>
   
