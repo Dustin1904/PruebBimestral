@@ -52,3 +52,74 @@ cd PruebaBimestral
 
 # Instalar dependencias
 npm install
+```
+## APP Mejorada
+Una aplicación debe contar con una pantalla de carga (splash screen) y un icono personalizado para distinguir su aplicación, en este caso se realiza una serie de procesos para realizar esto los cuales son detallados a continuación: 
+### Creacion del splash screen e iconos
+- Es necesario estar en el directorio donde se encuentra nuestro proyecto
+- Necesitamos ejecutar el siguiente comando:
+  ```bash
+  npm install @capacitor/splash-screen
+  ```
+- Luego nos dirijimos a nuestro archivo "capacitor.config.ts" y agregamos la siguiente configuracion: 
+```ts
+  appId: 'io.ionic.starter',
+  appName: 'PruebBimestral',
+  webDir: 'www',
+  plugins: {
+    "SplashScreen": {
+      "launchShowDuration": 0,
+      "launchAutoHide": true,
+      "launchFadeOutDuration": 3000,
+      "backgroundColor": "#ffffffff",
+      "androidSplashResourceName": "splash",
+      "androidScaleType": "CENTER_CROP",
+      "showSpinner": false,
+      "androidSpinnerStyle": "large",
+      "iosSpinnerStyle": "small",
+      "spinnerColor": "#999999",
+      "splashFullScreen": false,
+      "splashImmersive": false,
+      "layoutName": "launch_screen",
+      "useDialog": false
+    }
+  }
+```
+- En nuestro archivo "app.component.ts" importamos el SplashScreen y 
+```ts
+import { SplashScreen } from '@capacitor/splash-screen';
+```
+- Establecemos una funcion que se encarga de ejecutar el SplashScreen
+```ts
+export class AppComponent {
+  constructor() {
+    this.splash();
+  }
+  async splash() {
+    await SplashScreen.show({
+      autoHide: true,
+      showDuration: 5000
+    });
+  }
+}
+```
+- Se procede a ejecutar el siguiente comando en la terminal:
+  ```bash
+  npm install @capacitor/assets
+  ```
+- En la raíz de nuestro proyecto debemos tener un directorio llamado "assets" en donde en colocaran las imagenes que proximamente serán nuestro splash e icono, una consideracion clave es que nuestro splash debe tener un tamaño de 2732px X 2732px y nuestro icono un tamaño de 1024px X 1024px
+![image](https://github.com/user-attachments/assets/0a5fba69-80e1-4eee-a099-63c7262da077)
+- Procedemos a ejecutar el siguiente comando
+```bash
+npx capacitor-assets generate
+```
+- Por ultimo solo resta generar la apk del proyecto para visualizarlo desde nuestro dispositivo, tambien se puede utilizar un emulador.
+
+## SplashScreen
+<div align="center">
+  ![Imagen de WhatsApp 2024-11-04 a las 13 04 36_cf2d4052](https://github.com/user-attachments/assets/f49f922e-afc9-454a-bfd7-450619cdda45)
+</div>
+## Icono de la aplicación
+<div align="center">
+  ![Imagen de WhatsApp 2024-11-04 a las 13 04 35_b5e0011d](https://github.com/user-attachments/assets/fe1be19e-ea11-420a-addc-a46bc6901f4b)
+</div>
