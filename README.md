@@ -108,7 +108,9 @@ export class AppComponent {
   npm install @capacitor/assets
   ```
 - En la raíz de nuestro proyecto debemos tener un directorio llamado "assets" en donde en colocaran las imagenes que proximamente serán nuestro splash e icono, una consideracion clave es que nuestro splash debe tener un tamaño de 2732px X 2732px y nuestro icono un tamaño de 1024px X 1024px
-![image](https://github.com/user-attachments/assets/0a5fba69-80e1-4eee-a099-63c7262da077)
+<div align="center">
+  ![image](https://github.com/user-attachments/assets/0a5fba69-80e1-4eee-a099-63c7262da077)
+</div>
 - Procedemos a ejecutar el siguiente comando
 ```bash
 npx capacitor-assets generate
