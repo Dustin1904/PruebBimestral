@@ -109,7 +109,7 @@ export class AppComponent {
   ```
 - En la raíz de nuestro proyecto debemos tener un directorio llamado "assets" en donde en colocaran las imagenes que proximamente serán nuestro splash e icono, una consideracion clave es que nuestro splash debe tener un tamaño de 2732px X 2732px y nuestro icono un tamaño de 1024px X 1024px
   <div align="center">
-    ![image](https://github.com/user-attachments/assets/353de59f-249a-4d28-9e9a-d75e6708a73a)
+    ![image](https://github.com/user-attachments/assets/4dbdb2cd-864e-4c85-ba56-77f56a4f1288)
 
   </div>
 
@@ -121,10 +121,12 @@ npx capacitor-assets generate
 
 ## SplashScreen
 <div align="center">
-  ![Imagen de WhatsApp 2024-11-04 a las 13 04 36_3158f8c9](https://github.com/user-attachments/assets/480c20a8-66c4-4fb8-8105-05fd96a98c88)
+  ![Imagen de WhatsApp 2024-11-04 a las 13 04 36_acd9b1c5](https://github.com/user-attachments/assets/ea85ef30-307b-4de0-b91e-14c617cefb6e)
+
 </div>
+
 ## Icono de la aplicación
 <div align="center">
-  ![Imagen de WhatsApp 2024-11-04 a las 13 04 35_f1a03cb8](https://github.com/user-attachments/assets/494ca241-b296-44d7-b4d8-9a96f9a5e368)
+  ![Imagen de WhatsApp 2024-11-04 a las 13 04 35_1f964808](https://github.com/user-attachments/assets/9229fcc5-cc3a-4ee9-b4f1-04eebfeec305)
 
 </div>
